@@ -6,7 +6,7 @@ function IconBackToTop() {
     return (
         <>
             <Link href="/">
-                <button className="rounded-full w-16 h-16 mt-28 flex items-center justify-center">
+                <button className="btnToTop rounded-full w-16 h-16 mt-28 flex items-center justify-center">
                     <IconArrowBigUpLines width={30} height={30} />
                 </button>
             </Link>

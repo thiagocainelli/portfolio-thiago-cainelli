@@ -1,0 +1,8 @@
+
+.btnSocials:hover {
+    background: linear-gradient(to right, #03017e, #1945be);
+}
+
+.firstImage {
+    box-shadow: 20px 20px 12px -10px rgba(19,51,140,0.43);
+}
