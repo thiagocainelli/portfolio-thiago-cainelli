@@ -1,0 +1,5 @@
+.titlesText {
+    border-bottom: 3px solid;
+    border-image: linear-gradient(to left, #02005c, #18181B);
+    border-image-slice: 1;
+}

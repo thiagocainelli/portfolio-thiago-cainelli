@@ -1,0 +1,5 @@
+.secondImage {
+    border: 3px solid;
+    border-image: linear-gradient(to left, #18181B, #02005c);
+    border-image-slice: 1;
+}
