@@ -3,6 +3,7 @@ import Header from "@/components/Header";
 import IconBackToTop from "@/components/IconBackToTop";
 import PageBeginner from "./beginner";
 import PageAbout from "./about";
+import PageTechSkills from "./tech-skills";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
 
         <PageBeginner />
         <PageAbout />
+        <PageTechSkills />
 
       </section>
       
