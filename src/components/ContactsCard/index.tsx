@@ -65,7 +65,7 @@ function ContactsCard() {
                             />
                         </button>
 
-                        <p>/in/thiagocainelli</p>
+                        <p className="border-b border-slate-300 hover:brightness-75">/in/thiagocainelli</p>
                     </Link>
 
                     <Link href="https://www.linkedin.com/in/thiagocainelli" target="_blank" className="flex items-center gap-2">
@@ -76,7 +76,7 @@ function ContactsCard() {
                             />
                         </button>
 
-                        <p>/thiagocainelli</p>
+                        <p className="border-b border-slate-300 hover:brightness-75">/thiagocainelli</p>
                     </Link>
 
                     <Link href="mailto:thiagocainelli@gmail.com" target="_blank" className="flex items-center gap-2">
@@ -87,7 +87,7 @@ function ContactsCard() {
                             />
                         </button>
 
-                        <p>thiagocainelli@gmail.com</p>
+                        <p className="border-b border-slate-300 hover:brightness-75">thiagocainelli@gmail.com</p>
                     </Link>
 
                     <Link href="https://api.whatsapp.com/send?phone=5516982514074" target="_blank" className="flex items-center gap-2">
@@ -98,7 +98,7 @@ function ContactsCard() {
                             />
                         </button>
 
-                        <p>+55 (16) 98251-4074</p>
+                        <p className="border-b border-slate-300 hover:brightness-75">+55 (16) 98251-4074</p>
                     </Link>
    
                 </div>

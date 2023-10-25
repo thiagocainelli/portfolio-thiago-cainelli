@@ -9,10 +9,9 @@ import Contacts from "../components/Contacts";
 
 export default function Home() {
   return (
-    <main className="scroll-smooth flex flex-col items-center min-h-screen w-screen max-w-full bg-zinc-900 text-slate-300">
+    <main className="flex flex-col items-center min-h-screen w-screen max-w-full bg-zinc-900 text-slate-300">
       
       <Header />
-     
      
       <section className="grow flex flex-col items-center w-[90%] max-w-[1700px]">
         <Beginner />
