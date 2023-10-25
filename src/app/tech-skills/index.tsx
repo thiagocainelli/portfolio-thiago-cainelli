@@ -3,11 +3,12 @@ import tailwind from "@/images/tailwind.svg"
 import javascript from "@/images/javascript.svg"
 import typescript from "@/images/typescript.svg"
 import git from "@/images/git.svg"
-import github from "@/images/github.svg"
 import reactjs from "@/images/reactjs.svg"
 import nextjs from "@/images/nextjs.svg"
 import html from "@/images/html.svg"
 import css from "@/images/css.svg"
+import bootstrap from "@/images/bootstrap.svg"
+import sass from "@/images/sass.svg"
 import TechCard from "@/components/TechCard";
 
 function PageTechSkills() {
@@ -24,6 +25,8 @@ function PageTechSkills() {
                 <TechCard image={nextjs} name="NextJS" />
                 <TechCard image={tailwind} name="TailwindCSS" />
                 <TechCard image={git} name="Git" />
+                <TechCard image={bootstrap} name="Bootstrap" />
+                <TechCard image={sass} name="SASS" />
         
             </div>
 
