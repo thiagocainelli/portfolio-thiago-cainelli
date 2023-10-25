@@ -15,15 +15,15 @@ function PageTechSkills() {
         <section id="tech-skills" className="w-full flex flex-col items-center border-t border-zinc-800 mb-3">
             <Titles text="Tech Skills" />
 
-            <div className="flex gap-5 flex-wrap items-center justify-center my-5">
-                <TechCard localImage={html} name="HTML5" />
-                <TechCard localImage={css} name="CSS3" />
-                <TechCard localImage={javascript} name="JavaScript" />
-                <TechCard localImage={typescript} name="TypeScript" />
-                <TechCard localImage={reactjs} name="ReactJS" />
-                <TechCard localImage={nextjs} name="NextJS" />
-                <TechCard localImage={tailwind} name="TailwindCSS" />
-                <TechCard localImage={git} name="Git" />
+            <div className="flex gap-5 flex-wrap items-center justify-center my-10">
+                <TechCard image={html} name="HTML5" />
+                <TechCard image={css} name="CSS3" />
+                <TechCard image={javascript} name="JavaScript" />
+                <TechCard image={typescript} name="TypeScript" />
+                <TechCard image={reactjs} name="ReactJS" />
+                <TechCard image={nextjs} name="NextJS" />
+                <TechCard image={tailwind} name="TailwindCSS" />
+                <TechCard image={git} name="Git" />
         
             </div>
 
