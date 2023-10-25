@@ -11,7 +11,7 @@ import bootstrap from "@/images/bootstrap.svg"
 import sass from "@/images/sass.svg"
 import TechCard from "@/components/TechCard";
 
-function PageTechSkills() {
+function TechSkills() {
     return (
         <section id="tech-skills" className="w-full flex flex-col items-center border-t border-zinc-800 mb-3">
             <Titles text="Tech Skills" />
@@ -34,4 +34,4 @@ function PageTechSkills() {
     )
 }
 
-export default PageTechSkills
+export default TechSkills

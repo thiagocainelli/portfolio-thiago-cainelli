@@ -3,7 +3,9 @@ import ThiagoImg from "@/images/thiago1-without-bg.png";
 import Link from "next/link";
 import { IconBrandLinkedin, IconBrandGithub } from "@tabler/icons-react";
 import "./Beginner.css";
-function PageBeginner() {
+
+
+function Beginner() {
     return (
         <section className="w-full h-screen flex flex-col items-center justify-evenly sm:flex-row my-5">
             <div className="flex flex-col flex-wrap text-center gap-5 sm:gap-3 sm:text-left">
@@ -35,4 +37,4 @@ function PageBeginner() {
     )
 }
 
-export default PageBeginner
+export default Beginner

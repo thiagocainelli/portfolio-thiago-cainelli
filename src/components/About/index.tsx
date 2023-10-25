@@ -3,7 +3,7 @@ import Image from "next/image"
 import ThiagoImg from "@/images/thiago2-without-bg.png";
 import "./About.css";
 
-function PageAbout() {
+function About() {
     return (
         <section id="about" className="w-full flex flex-col items-center border-t border-zinc-800 mb-3">
             <Titles text="Sobre Mim" />
@@ -27,4 +27,4 @@ function PageAbout() {
     )
 }
 
-export default PageAbout
+export default About
