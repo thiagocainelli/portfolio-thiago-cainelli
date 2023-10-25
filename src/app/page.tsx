@@ -5,6 +5,7 @@ import PageBeginner from "./beginner";
 import PageAbout from "./about";
 import PageTechSkills from "./tech-skills";
 import Projects from "./projects";
+import Contacts from "./contacts";
 
 export default function Home() {
   return (
@@ -18,7 +19,8 @@ export default function Home() {
         <PageAbout />
         <PageTechSkills />
         <Projects />
-        
+        <Contacts />
+
       </section>
       
 

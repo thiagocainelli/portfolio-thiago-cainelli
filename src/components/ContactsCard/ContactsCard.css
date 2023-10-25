@@ -1,0 +1,9 @@
+.btnSubmit {
+    background: linear-gradient(to right, #03017e, #1945be);
+}
+
+.cardContacts {
+    border: 3px solid;
+    border-image: linear-gradient(to left, #18181B, #02005c);
+    border-image-slice: 1;
+}
