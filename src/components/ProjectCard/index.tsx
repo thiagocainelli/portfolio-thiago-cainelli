@@ -28,7 +28,7 @@ function ProjectCard({ projectName, projectImage, repositoryLink, prevLink, tech
 
         <div className="mt-3">
             <Image
-                className="w-full " 
+                className="w-full border border-zinc-600" 
                 src={projectImage} 
                 alt={projectName} 
             />
@@ -36,14 +36,14 @@ function ProjectCard({ projectName, projectImage, repositoryLink, prevLink, tech
 
         <div className="flex items-center justify-center gap-4 w-full mb-4 border-b border-zinc-600 py-5">
             <Link href={repositoryLink} target="_blank" >
-                <button className="btnLinks flex items-center border border-slate-300 px-2 py-1 gap-1 rounded-md">
+                <button className="btnLinks flex items-center border border-zinc-600 px-2 py-1 gap-1 rounded-md">
                     <IconBrandGithub />
                     Repositório
                 </button>
             </Link>
 
             <Link href={prevLink} target="_blank" >
-                <button className="btnLinks flex items-center border border-slate-300 px-2 py-1 gap-1 rounded-md">
+                <button className="btnLinks flex items-center border border-zinc-600 px-2 py-1 gap-1 rounded-md">
                     <IconExternalLink />
                     Prévia
                 </button>
