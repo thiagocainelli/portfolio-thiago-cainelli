@@ -13,6 +13,7 @@ import personalFinances from "@/images/personal-finances.png";
 import tlviagens from "@/images/tl-viagens.png";
 import tcimports from "@/images/tc-imports.png";
 import projectx from "@/images/space-x.png";
+import Link from "next/link";
 
 interface ProjectsProps {
     isDark: boolean
@@ -24,7 +25,7 @@ function Projects({ isDark }: ProjectsProps) {
             
             <Titles text="Projetos" />
 
-            <div className="flex gap-5 flex-wrap items-center justify-center my-10">
+            <div className="flex gap-5 flex-wrap items-center justify-center mt-10">
                 <ProjectCard
                     isDark={isDark} 
                     projectName="Finanças Pessoais"
@@ -80,7 +81,10 @@ function Projects({ isDark }: ProjectsProps) {
                     techImage3={bootstrap}
                     techName3="Bootstrap"
                 />
+            </div>
 
+            <div className="w-full flex items-center justify-center my-10">
+                <p className="text-center">Para visualizar mais projetos, acesse o meu <Link href="https://github.com/thiagocainelli" target="_blank"><span className="text-blue-700 border-b border-blue-700 hover:text-blue-900">GitHub!</span></Link></p>
             </div>
 
         </section>
