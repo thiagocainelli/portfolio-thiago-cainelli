@@ -1,3 +1,4 @@
+"use client"
 
 import Link from "next/link"
 import "./ContactsCard.css"
@@ -6,50 +7,103 @@ import linkedin from "@/images/linkedin.svg"
 import github from "@/images/github.svg"
 import email from "@/images/email.svg"
 import whatsapp from "@/images/whatsapp.svg"
+import { useRef, useState } from "react"
 
-function ContactsCard() {
+interface ContactsCardProps{
+    isDark: boolean
+}
+
+function ContactsCard({ isDark }: ContactsCardProps) {
+
+    const [name, setName] = useState<string>("")
+    const [personalEmail, setPersonalEmail] = useState<string>("")
+    const [contact, setContact] = useState<string>("")
+    const [message, setMessage] = useState<string>("")
+    const [submitOk, setSubmitOk] = useState<boolean>(false)
+
+
+    const handleSubmit = (ev: any) => { 
+        ev.preventDefault()
+
+        if(name.length >= 3 && personalEmail.length >= 8 && personalEmail.includes("@") && contact.length >= 8 && message.length >= 2) {
+            
+            setSubmitOk(true) 
+            setName("")
+            setPersonalEmail("")
+            setContact("")
+            setMessage("")
+            
+        } else {
+            alert(`Não foi possível enviar a mensagem. Por favor verificar os requisitos necessários.`)
+        }
+
+        return
+    }
+
     return (
         <div className="cardContacts p-5 flex flex-col gap-5 my-10 lg:flex-row ">
             
-            <div className=" border-b pb-7 border-zinc-700 lg:border-b-0 lg:border-e lg:pe-10">
+            <div className="border-b pb-7 border-zinc-700 lg:border-b-0 lg:border-e lg:pe-10">
                 <h3 className="text-center text-2xl mb-7">Envie-me uma mensagem!</h3>
                 <form className="flex flex-col" method="POST" autoComplete="off">
-                    <label htmlFor="name" className="mt-3 text-blue-700">Nome</label>
+                    <label htmlFor="name" className="text-blue-700">Nome</label>
                     <input
-                        className="bg-transparent outline-none border-b border-zinc-800 p-1 transition-all focus-within:border-blue-700" 
+                        className={`outline-none border border-transparent py-1 px-2 transition-all rounded-sm focus-within:border-blue-700 ${isDark ?"bg-zinc-900" : "bg-zinc-300"}`} 
                         type="text" 
                         name="name" 
-                        id="name" 
+                        id="name"
+                        value={name} 
+                        onChange={(ev) => setName(ev.target.value)}
                         required
-                        minLength={1}
+                        minLength={3}
                     />
-                    <label htmlFor="email" className="mt-3 text-blue-700">Email</label>
+                    <label htmlFor="email" className="mt-5 text-blue-700">Email</label>
                     <input 
-                        className="bg-transparent outline-none border-b  border-zinc-800 p-1 focus-within:border-blue-700"
+                        className={`outline-none border border-transparent py-1 px-2 transition-all rounded-sm focus-within:border-blue-700 ${isDark ?"bg-zinc-900" : "bg-zinc-300"}`}
                         type="email" 
                         name="email" 
-                        id="email" 
+                        id="email"
+                        value={personalEmail} 
+                        onChange={(ev) => setPersonalEmail(ev.target.value)}
                         required
                         minLength={10}
                     />
-                    <label htmlFor="contact" className="mt-3 text-blue-700">Contato</label>
+                    <label htmlFor="contact" className="mt-5 text-blue-700">Contato</label>
                     <input
-                        className="bg-transparent outline-none border-b border-zinc-800 p-1 focus-within:border-blue-700"
+                        className={`outline-none border border-transparent py-1 px-2 transition-all rounded-sm focus-within:border-blue-700 ${isDark ?"bg-zinc-900" : "bg-zinc-300"}`}
                         type="tel" 
                         name="contact" 
-                        id="contact" 
+                        id="contact"
+                        value={contact} 
+                        onChange={(ev) => setContact(ev.target.value)}
                         required
                         minLength={8}
                     />
+                    <label htmlFor="message" className="mt-5 text-blue-700">Mensagem</label>
+                    <textarea
+                        className={`w-full h-[100px] outline-none border border-transparent py-1 px-2 transition-all rounded-sm focus-within:border-blue-700 ${isDark ?"bg-zinc-900" : "bg-zinc-300"}`}
+                        name="message" 
+                        id="message"
+                        value={message} 
+                        onChange={(ev) => setMessage(ev.target.value)}
+                        required
+                        minLength={2}
+                    />
 
                     <div className="flex items-center justify-center mt-7">
-                        <button 
+                        <button
                             type="submit"
                             className="bg-blue-700 text-zinc-100 px-2 py-1  rounded-md hover:bg-blue-900 active:brightness-50"
+                            onClick={handleSubmit}
                         >
                             Enviar mensagem
                         </button>
                     </div>
+                    {submitOk && (
+                        <div className={`flex items-center justify-center mt-7 w-full h-[50px] outline-none border border-transparent py-1 px-2 rounded-sm ${isDark ?"bg-zinc-900" : "bg-zinc-300"}`}>
+                            <p className="text-sm sm:text-base">Mensagem enviada, muito obrigado! :) </p>
+                        </div>
+                    )}
                 </form>
             </div>
 
@@ -57,48 +111,48 @@ function ContactsCard() {
                 <h3 className="text-center text-2xl mb-5 lg:mb-0">Links de contato</h3>
                 
                 <div className="flex flex-col justify-evenly gap-5 lg:gap-0 h-full"> 
-                    <Link href="https://www.linkedin.com/in/thiagocainelli" target="_blank" className="flex items-center gap-2">
-                        <button className="w-12 h-12 p-1 rounded-full border border-blue-700 hover:scale-105 hover:brightness-125">
+                    <Link href="https://www.linkedin.com/in/thiagocainelli" target="_blank" className="flex items-center gap-3">
+                        <button className="w-12 h-12 hover:scale-105 hover:brightness-125">
                             <Image 
                                 src={linkedin}
                                 alt="Linkedin Image"
                             />
                         </button>
 
-                        <p className="border-b border-zinc-800 hover:brightness-50">/in/thiagocainelli</p>
+                        <p className={`border-b hover:brightness-50 ${isDark ? "border-zinc-100" : "border-zinc-800"}`}>/in/thiagocainelli</p>
                     </Link>
 
-                    <Link href="https://www.linkedin.com/in/thiagocainelli" target="_blank" className="flex items-center gap-2">
-                        <button className="w-12 h-12 p-2 rounded-full border border-blue-700 hover:scale-105 hover:brightness-125">
+                    <Link href="https://www.linkedin.com/in/thiagocainelli" target="_blank" className="flex items-center gap-3">
+                        <button className="w-12 h-12 hover:scale-105 hover:brightness-125">
                             <Image 
                                 src={github}
                                 alt="GitHub Image"
                             />
                         </button>
 
-                        <p className="border-b border-zinc-800 hover:brightness-50">/thiagocainelli</p>
+                        <p className={`border-b hover:brightness-50 ${isDark ? "border-zinc-100" : "border-zinc-800"}`}>/thiagocainelli</p>
                     </Link>
 
-                    <Link href="mailto:thiagocainelli@gmail.com" target="_blank" className="flex items-center gap-2">
-                        <button className="w-12 h-12 p-2 rounded-full border border-blue-700 hover:scale-105 hover:brightness-125">
+                    <Link href="mailto:thiagocainelli@gmail.com" target="_blank" className="flex items-center gap-3">
+                        <button className="w-12 h-12 hover:scale-105 hover:brightness-125">
                             <Image 
                                 src={email}
                                 alt="Email Image"
                             />
                         </button>
 
-                        <p className="border-b border-zinc-800 hover:brightness-50">thiagocainelli@gmail.com</p>
+                        <p className={`border-b hover:brightness-50 ${isDark ? "border-zinc-100" : "border-zinc-800"}`}>thiagocainelli@gmail.com</p>
                     </Link>
 
-                    <Link href="https://api.whatsapp.com/send?phone=5516982514074" target="_blank" className="flex items-center gap-2">
-                        <button className="w-12 h-12 p-2 rounded-full border border-blue-700 hover:scale-105 hover:brightness-125">
+                    <Link href="https://api.whatsapp.com/send?phone=5516982514074" target="_blank" className="flex items-center gap-3">
+                        <button className="w-12 h-12 hover:scale-105 hover:brightness-125">
                             <Image 
                                 src={whatsapp}
                                 alt="WhatsApp Image"
                             />
                         </button>
 
-                        <p className="border-b border-zinc-800 hover:brightness-50">+55 (16) 98251-4074</p>
+                        <p className={`border-b hover:brightness-50 ${isDark ? "border-zinc-100" : "border-zinc-800"}`}>+55 (16) 98251-4074</p>
                     </Link>
    
                 </div>

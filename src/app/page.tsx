@@ -28,8 +28,8 @@ export default function Home() {
         <Beginner />
         <About isDark={isDark} />
         <TechSkills isDark={isDark} />
-        <Projects />
-        <Contacts />
+        <Projects isDark={isDark} />
+        <Contacts isDark={isDark} />
       </section>
     
       <IconBackToTop />

@@ -14,15 +14,19 @@ import tlviagens from "@/images/tl-viagens.png";
 import tcimports from "@/images/tc-imports.png";
 import projectx from "@/images/space-x.png";
 
+interface ProjectsProps {
+    isDark: boolean
+}
 
-function Projects() {
+function Projects({ isDark }: ProjectsProps) {
     return (
-        <section id="projects" className="w-full flex flex-col items-center border-t border-zinc-300 mb-3">
+        <section id="projects" className={`w-full flex flex-col items-center border-t mb-3 ${isDark ? "border-zinc-700" : "border-zinc-300"}`}>
             
             <Titles text="Projetos" />
 
             <div className="flex gap-5 flex-wrap items-center justify-center my-10">
-                <ProjectCard 
+                <ProjectCard
+                    isDark={isDark} 
                     projectName="Finanças Pessoais"
                     projectImage={personalFinances}
                     repositoryLink="https://github.com/thiagocainelli/personal-finances"
@@ -35,7 +39,8 @@ function Projects() {
                     techName3="TailwindCSS"
                 />
 
-                <ProjectCard 
+                <ProjectCard
+                    isDark={isDark} 
                     projectName="WebSite - TL Viagens"
                     projectImage={tlviagens}
                     repositoryLink="https://github.com/thiagocainelli/tl-viagens"
@@ -48,7 +53,8 @@ function Projects() {
                     techName3="TailwindCSS"
                 />
 
-                <ProjectCard 
+                <ProjectCard
+                    isDark={isDark} 
                     projectName="Controle de Estoque"
                     projectImage={tcimports}
                     repositoryLink="https://github.com/thiagocainelli/tcimports-stock"
@@ -61,7 +67,8 @@ function Projects() {
                     techName3="CSS3"
                 />
 
-                <ProjectCard 
+                <ProjectCard
+                    isDark={isDark} 
                     projectName="WebSite - ProjectX"
                     projectImage={projectx}
                     repositoryLink="https://github.com/thiagocainelli/projectX"

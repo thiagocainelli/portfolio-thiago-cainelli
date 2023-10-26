@@ -1,4 +1,4 @@
-import { IconMoonFilled } from "@tabler/icons-react";
+import { IconMoonFilled, IconSunFilled } from "@tabler/icons-react";
 import "./Header.css";
 import Link from "next/link";
 
@@ -19,8 +19,9 @@ function Header( {changeTheme, isDark}: HeaderProps ) {
             </nav>
 
             <div className="flex items-center gap-1">
-                <button onClick={changeTheme} className="bg-blue-700 text-zinc-100 w-10 h-10 rounded-md flex items-center justify-center hover:scale-105">
-                    <IconMoonFilled/>
+                <button onClick={changeTheme} className="bg-blue-700 text-zinc-100 w-20 h-10 rounded-md flex items-center justify-center gap-2 hover:scale-105 hover:bg-blue-900">
+                    {isDark? "Light" : "Dark"}
+                    {isDark? <IconSunFilled/> : <IconMoonFilled/>}
                 </button>
             </div>
             

@@ -1,7 +1,4 @@
 .btnToTop {
-    border: 3px transparent;
-    background: linear-gradient(to right, #03017e, #1D4ED8);
-    background-clip: content-box;
     position: fixed;
     bottom: 2%;
     right: 2%;

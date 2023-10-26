@@ -15,13 +15,14 @@ interface ProjectCardProps {
     techImage3?: any,
     techName3?: any,
     techImage4?: any,
-    techName4?: any
+    techName4?: any,
+    isDark: boolean
 }
 
 
-function ProjectCard({ projectName, projectImage, repositoryLink, prevLink, techImage1, techName1, techImage2, techName2, techImage3, techName3, techImage4, techName4} : ProjectCardProps) {
+function ProjectCard({ projectName, projectImage, repositoryLink, prevLink, techImage1, techName1, techImage2, techName2, techImage3, techName3, techImage4, techName4, isDark} : ProjectCardProps) {
     return (
-      <div className="w-[300px] h-[450px] p-3 bg-zinc-300 flex flex-col items-center justify-center border-2 border-transparent transition-all hover:scale-105 hover:border-blue-700  cursor-default">
+      <div className={`w-[320px] h-[470px] p-3 flex flex-col items-center justify-center border-2 border-transparent transition-all hover:scale-105 hover:border-blue-700 cursor-default ${isDark ? "bg-zinc-700" : "bg-zinc-300"}`}>
         <div className="text-2xl mb-1">
             {projectName}
         </div>
