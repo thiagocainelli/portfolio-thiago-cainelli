@@ -3,9 +3,13 @@ import Image from "next/image"
 import ThiagoImg from "@/images/thiago2-without-bg.png";
 import "./About.css";
 
-function About() {
+interface AboutProps {
+    isDark: boolean
+}
+
+function About({ isDark }: AboutProps) {
     return (
-        <section id="about" className="w-full flex flex-col items-center border-t border-zinc-300 mb-3">
+        <section id="about" className={`w-full flex flex-col items-center border-t mb-3 ${isDark ? "border-zinc-700" : "border-zinc-300"}`}>
             <Titles text="Sobre Mim" />
             
             <div className="flex flex-col gap-8 my-10 items-center justify-center sm:flex-row sm:gap-3">

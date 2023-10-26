@@ -16,7 +16,7 @@ function ContactsCard() {
                 <form className="flex flex-col" method="POST" autoComplete="off">
                     <label htmlFor="name" className="mt-3 text-blue-700">Nome</label>
                     <input
-                        className="bg-transparent outline-none border-b-2  border-zinc-500 p-1 transition-all focus-within:border-blue-700" 
+                        className="bg-transparent outline-none border-b border-zinc-800 p-1 transition-all focus-within:border-blue-700" 
                         type="text" 
                         name="name" 
                         id="name" 
@@ -25,7 +25,7 @@ function ContactsCard() {
                     />
                     <label htmlFor="email" className="mt-3 text-blue-700">Email</label>
                     <input 
-                        className="bg-transparent outline-none border-b-2  border-zinc-500 p-1 focus-within:border-blue-700"
+                        className="bg-transparent outline-none border-b  border-zinc-800 p-1 focus-within:border-blue-700"
                         type="email" 
                         name="email" 
                         id="email" 
@@ -34,7 +34,7 @@ function ContactsCard() {
                     />
                     <label htmlFor="contact" className="mt-3 text-blue-700">Contato</label>
                     <input
-                        className="bg-transparent outline-none border-b-2  border-zinc-500 p-1 focus-within:border-blue-700"
+                        className="bg-transparent outline-none border-b border-zinc-800 p-1 focus-within:border-blue-700"
                         type="tel" 
                         name="contact" 
                         id="contact" 
@@ -45,7 +45,7 @@ function ContactsCard() {
                     <div className="flex items-center justify-center mt-7">
                         <button 
                             type="submit"
-                            className="btnSubmit  border border-zinc-600 px-2 py-1  rounded-md hover:brightness-75 active:brightness-50"
+                            className="bg-blue-700 text-zinc-100 px-2 py-1  rounded-md hover:bg-blue-900 active:brightness-50"
                         >
                             Enviar mensagem
                         </button>
@@ -65,7 +65,7 @@ function ContactsCard() {
                             />
                         </button>
 
-                        <p className="border-b border-slate-300 hover:brightness-75">/in/thiagocainelli</p>
+                        <p className="border-b border-zinc-800 hover:brightness-50">/in/thiagocainelli</p>
                     </Link>
 
                     <Link href="https://www.linkedin.com/in/thiagocainelli" target="_blank" className="flex items-center gap-2">
@@ -76,7 +76,7 @@ function ContactsCard() {
                             />
                         </button>
 
-                        <p className="border-b border-slate-300 hover:brightness-75">/thiagocainelli</p>
+                        <p className="border-b border-zinc-800 hover:brightness-50">/thiagocainelli</p>
                     </Link>
 
                     <Link href="mailto:thiagocainelli@gmail.com" target="_blank" className="flex items-center gap-2">
@@ -87,7 +87,7 @@ function ContactsCard() {
                             />
                         </button>
 
-                        <p className="border-b border-slate-300 hover:brightness-75">thiagocainelli@gmail.com</p>
+                        <p className="border-b border-zinc-800 hover:brightness-50">thiagocainelli@gmail.com</p>
                     </Link>
 
                     <Link href="https://api.whatsapp.com/send?phone=5516982514074" target="_blank" className="flex items-center gap-2">
@@ -98,7 +98,7 @@ function ContactsCard() {
                             />
                         </button>
 
-                        <p className="border-b border-slate-300 hover:brightness-75">+55 (16) 98251-4074</p>
+                        <p className="border-b border-zinc-800 hover:brightness-50">+55 (16) 98251-4074</p>
                     </Link>
    
                 </div>
