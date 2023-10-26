@@ -1,6 +1,6 @@
 header {
     border-bottom: 3px solid;
-    border-image: linear-gradient(to right, #18181B, #02005c);
+    border-image: linear-gradient(to right, transparent, #1D4ED8);
     border-image-slice: 1;
 }
 

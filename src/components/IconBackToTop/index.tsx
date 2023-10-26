@@ -31,7 +31,7 @@ function IconBackToTop() {
     return (
         <> 
             <Link href="/" >
-                <button className={`rounded-full w-12 h-12 mt-28 flex items-center justify-center ${iconIsOpened ? 'btnToTop' : 'hidden'}`}>
+                <button className={`rounded-full w-12 h-12 mt-28 flex items-center justify-center text-zinc-100 ${iconIsOpened ? 'btnToTop' : 'hidden'}`}>
                     <IconArrowBigUpLines width={30} height={30} />
                 </button>    
             </Link>         

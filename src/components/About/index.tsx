@@ -5,7 +5,7 @@ import "./About.css";
 
 function About() {
     return (
-        <section id="about" className="w-full flex flex-col items-center border-t border-zinc-800 mb-3">
+        <section id="about" className="w-full flex flex-col items-center border-t border-zinc-300 mb-3">
             <Titles text="Sobre Mim" />
             
             <div className="flex flex-col gap-8 my-10 items-center justify-center sm:flex-row sm:gap-3">

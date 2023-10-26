@@ -13,7 +13,7 @@ import TechCard from "@/components/TechCard";
 
 function TechSkills() {
     return (
-        <section id="tech-skills" className="w-full flex flex-col items-center border-t border-zinc-800 mb-3">
+        <section id="tech-skills" className="w-full flex flex-col items-center border-t border-zinc-300 mb-3">
             <Titles text="Tech Skills" />
 
             <div className="flex gap-5 flex-wrap items-center justify-center my-10">

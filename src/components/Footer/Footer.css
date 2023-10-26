@@ -1,5 +1,5 @@
 footer {
     border-top: 3px solid;
-    border-image: linear-gradient(to right, #02005c, #18181B);
+    border-image: linear-gradient(to right, #1D4ED8, transparent);
     border-image-slice: 1;
 }

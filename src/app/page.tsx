@@ -9,7 +9,7 @@ import Contacts from "../components/Contacts";
 
 export default function Home() {
   return (
-    <main className="flex flex-col items-center min-h-screen w-screen max-w-full bg-zinc-900 text-slate-300">
+    <main className="flex flex-col items-center min-h-screen w-screen max-w-full bg-zinc-100 text-zinc-800">
       
       <Header />
      

@@ -21,8 +21,8 @@ interface ProjectCardProps {
 
 function ProjectCard({ projectName, projectImage, repositoryLink, prevLink, techImage1, techName1, techImage2, techName2, techImage3, techName3, techImage4, techName4} : ProjectCardProps) {
     return (
-      <div className="w-[300px] h-[450px] p-3 bg-zinc-800 flex flex-col items-center justify-center border-2 border-transparent transition-all hover:scale-105 hover:border-blue-700  cursor-default">
-        <div className="text-2xl">
+      <div className="w-[300px] h-[450px] p-3 bg-zinc-300 flex flex-col items-center justify-center border-2 border-transparent transition-all hover:scale-105 hover:border-blue-700  cursor-default">
+        <div className="text-2xl mb-1">
             {projectName}
         </div>
 
@@ -34,16 +34,16 @@ function ProjectCard({ projectName, projectImage, repositoryLink, prevLink, tech
             />
         </div>
 
-        <div className="flex items-center justify-center gap-4 w-full mb-4 border-b border-zinc-600 py-5">
+        <div className="flex items-center justify-center gap-4 w-full mb-4 border-b border-zinc-500 py-5">
             <Link href={repositoryLink} target="_blank" >
-                <button className="btnLinks flex items-center border border-zinc-600 px-2 py-1 gap-1 rounded-md">
+                <button className="bg-blue-700 text-zinc-100 flex items-center px-2 py-1 gap-1 rounded-md hover:bg-blue-900">
                     <IconBrandGithub />
                     Repositório
                 </button>
             </Link>
 
             <Link href={prevLink} target="_blank" >
-                <button className="btnLinks flex items-center border border-zinc-600 px-2 py-1 gap-1 rounded-md">
+                <button className="bg-blue-700 text-zinc-100 flex items-center px-2 py-1 gap-1 rounded-md hover:bg-blue-900">
                     <IconExternalLink />
                     Prévia
                 </button>

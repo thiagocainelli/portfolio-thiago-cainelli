@@ -17,7 +17,7 @@ import projectx from "@/images/space-x.png";
 
 function Projects() {
     return (
-        <section id="projects" className="w-full flex flex-col items-center border-t border-zinc-800 mb-3">
+        <section id="projects" className="w-full flex flex-col items-center border-t border-zinc-300 mb-3">
             
             <Titles text="Projetos" />
 
