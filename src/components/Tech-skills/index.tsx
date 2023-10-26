@@ -20,7 +20,7 @@ function TechSkills({isDark}: TechSkillsProps) {
         <section id="tech-skills" className={`w-full flex flex-col items-center border-t mb-3 ${isDark ? "border-zinc-700" : "border-zinc-300"}`}>
             <Titles text="Tech Skills" />
 
-            <div className="flex gap-5 flex-wrap items-center justify-center my-10">
+            <div className="flex gap-5 flex-wrap items-center justify-center mt-10 mb-14">
                 <TechCard isDark={isDark} image={html} name="HTML5" />
                 <TechCard isDark={isDark} image={css} name="CSS3" />
                 <TechCard isDark={isDark} image={javascript} name="JavaScript" />

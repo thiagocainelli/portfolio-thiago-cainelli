@@ -13,7 +13,7 @@ function About({ isDark }: AboutProps) {
         <section id="about" className={`w-full flex flex-col items-center border-t mb-3 ${isDark ? "border-zinc-700" : "border-zinc-300"}`}>
             <Titles text="Sobre Mim" />
             
-            <div className="flex flex-col gap-8 my-10 items-center justify-center sm:flex-row sm:gap-3">
+            <div className="flex flex-col gap-8 mt-10 mb-14 items-center justify-center sm:flex-row sm:gap-3">
                 <div className="w-full sm:w-[50%] flex justify-center items-center">
                     <Image 
                         className="secondImage" 

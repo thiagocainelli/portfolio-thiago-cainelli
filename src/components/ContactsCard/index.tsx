@@ -41,7 +41,7 @@ function ContactsCard({ isDark }: ContactsCardProps) {
     }
 
     return (
-        <div className="cardContacts p-5 flex flex-col gap-5 my-10 lg:flex-row ">
+        <div className="cardContacts p-5 flex flex-col gap-5 mt-10 mb-14 lg:flex-row ">
             
             <div className="border-b pb-7 border-zinc-700 lg:border-b-0 lg:border-e lg:pe-10">
                 <h3 className="text-center text-2xl mb-7">Envie-me uma mensagem!</h3>

@@ -1,6 +1,8 @@
 import { IconMoonFilled, IconSunFilled } from "@tabler/icons-react";
 import "./Header.css";
 import Link from "next/link";
+import LogoDark from "@/images/thiagocainelli-logo-dark.png"
+import Image from "next/image";
 
 interface HeaderProps {
     changeTheme: () => void,
@@ -10,7 +12,13 @@ interface HeaderProps {
 function Header( {changeTheme, isDark}: HeaderProps ) {
     return (
         <header className="flex flex-col gap-8 items-center justify-between p-7 sm:flex-row w-full">
-            <Link href="/" className="text-3xl sm:text-xl"> CainelliDEV </Link>
+            <Link href="/" className="text-3xl sm:text-xl">
+                <Image
+                    className="w-[120px]" 
+                    src={LogoDark} 
+                    alt="Logotipo"
+                />
+            </Link>
             <nav className="flex flex-col gap-5 sm:flex-row">
                 <Link className={`border-b border-transparent transition-all ${isDark ? "hover:border-zinc-100" : "hover:border-zinc-800" }`} href="#about">SOBRE MIM</Link>
                 <Link href="#tech-skills" className={`border-b border-transparent transition-all ${isDark ? "hover:border-zinc-100" : "hover:border-zinc-800" }`}>TECH SKILLS</Link>

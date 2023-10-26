@@ -83,7 +83,7 @@ function Projects({ isDark }: ProjectsProps) {
                 />
             </div>
 
-            <div className="w-full flex items-center justify-center my-10">
+            <div className="w-full flex items-center justify-center mt-10 mb-14">
                 <p className="text-center">Para visualizar mais projetos, acesse o meu <Link href="https://github.com/thiagocainelli" target="_blank"><span className="text-blue-700 border-b border-blue-700 hover:text-blue-900">GitHub!</span></Link></p>
             </div>
 
