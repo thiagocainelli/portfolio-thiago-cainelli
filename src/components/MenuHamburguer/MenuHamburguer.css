@@ -3,7 +3,7 @@
     height: 3px; 
     width: 30px;
     margin: 3px auto;
-    transition: 0.4s;
+    transition: .6s;
 }
 
 /* Ao clicar no botão irá alterar a barra para ficar como um X */

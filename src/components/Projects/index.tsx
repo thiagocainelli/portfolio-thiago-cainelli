@@ -9,10 +9,10 @@ import html from "@/images/technologies/html.svg"
 import css from "@/images/technologies/css.svg"
 import sass from "@/images/technologies/sass.svg"
 import bootstrap from "@/images/technologies/bootstrap.svg"
-import personalFinances from "@/images/projects/personal-finances.png";
-import tlviagens from "@/images/projects/tl-viagens.png";
-import tcimports from "@/images/projects/tc-imports.png";
-import projectx from "@/images/projects/space-x.png";
+import personalFinances from "@/images/projects/personal-finances.jpeg";
+import tlviagens from "@/images/projects/tl-viagens.jpeg";
+import tcimports from "@/images/projects/tc-imports.jpeg";
+import projectx from "@/images/projects/space-x.jpeg";
 import Link from "next/link";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
