@@ -10,17 +10,26 @@ import css from "@/images/css.svg"
 import bootstrap from "@/images/bootstrap.svg"
 import sass from "@/images/sass.svg"
 import TechCard from "@/components/TechCard";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from "react";
 
 interface TechSkillsProps {
     isDark: boolean
 }
 
 function TechSkills({isDark}: TechSkillsProps) {
+    
+    useEffect(() => {
+        AOS.init(); 
+    }, [])
+    
+    
     return (
         <section id="tech-skills" className={`w-full flex flex-col items-center border-t mb-3 ${isDark ? "border-zinc-700" : "border-zinc-300"}`}>
             <Titles text="Tech Skills" />
 
-            <div className="flex gap-5 flex-wrap items-center justify-center mt-10 mb-14">
+            <div data-aos="fade-down" data-aos-duration="2000" className="flex gap-5 flex-wrap items-center justify-center mt-10 mb-14">
                 <TechCard isDark={isDark} image={html} name="HTML5" />
                 <TechCard isDark={isDark} image={css} name="CSS3" />
                 <TechCard isDark={isDark} image={javascript} name="JavaScript" />

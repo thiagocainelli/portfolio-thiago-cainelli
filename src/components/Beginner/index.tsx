@@ -3,9 +3,16 @@ import ThiagoImg from "@/images/thiago1-without-bg.png";
 import Link from "next/link";
 import { IconBrandLinkedin, IconBrandGithub } from "@tabler/icons-react";
 import "./Beginner.css";
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from "react";
 
 function Beginner() {
+
+    useEffect(() => {
+        AOS.init(); 
+    }, [])
+
     return (
         <section className="w-full sm:h-screen flex flex-col items-center justify-evenly sm:flex-row my-5">
             <div className="flex flex-col flex-wrap text-center gap-5 sm:gap-3 sm:text-left">
@@ -26,7 +33,7 @@ function Beginner() {
                     </Link>
                 </div>
             </div>
-            <div>
+            <div data-aos="fade-left" data-aos-duration="1000">
                 <Image
                     className="firstImage" 
                     src={ThiagoImg} 

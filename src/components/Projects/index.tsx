@@ -14,18 +14,25 @@ import tlviagens from "@/images/tl-viagens.png";
 import tcimports from "@/images/tc-imports.png";
 import projectx from "@/images/space-x.png";
 import Link from "next/link";
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from "react";
 interface ProjectsProps {
     isDark: boolean
 }
 
 function Projects({ isDark }: ProjectsProps) {
+    
+    useEffect(() => {
+        AOS.init(); 
+    }, [])
+    
     return (
         <section id="projects" className={`w-full flex flex-col items-center border-t mb-3 ${isDark ? "border-zinc-700" : "border-zinc-300"}`}>
             
             <Titles text="Projetos" />
 
-            <div className="flex gap-5 flex-wrap items-center justify-center mt-10">
+            <div data-aos="zoom-in-down" data-aos-duration="2000" className="flex gap-5 flex-wrap items-center justify-center mt-10">
                 <ProjectCard
                     isDark={isDark} 
                     projectName="Finanças Pessoais"
