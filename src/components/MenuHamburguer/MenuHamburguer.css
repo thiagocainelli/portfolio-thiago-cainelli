@@ -1,14 +1,16 @@
+/* Criando as barras do menu Hamburger */
 .bar {
     height: 3px;
-    width: 25px;
-    margin: 5px auto;
+    width: 30px;
+    margin: 3px auto;
     transition: 0.4s;
 }
-  
+
+/* Ao clicar no botão irá alterar a barra para ficar como um X */
 .bar1 {
     transform: rotate(-45deg) translate(-10px, 5px);
 }
-  
+
 .bar2 {
     opacity: 0;
 }
@@ -17,13 +19,19 @@
     transform: rotate(45deg) translate(-13px, -8px);
 }
 
+/* Barra X no menu já aberto, criado para fechar o menu */
+.barMenuOpen1 {
+    transform: rotate(-45deg) translate(0px, -10px);
+}
+  
+.barMenuOpen2 {
+    transform: rotate(45deg) translate(-14px, -5px);
+}
+
+/* Menu */
 .menu {
-    position: absolute;
-    z-index: 100;
-    width: 100vh;
+    position: absolute;    
     right: 0;
     left: 0;
     top: 0;
-    height: 30vh;
-    
 }
