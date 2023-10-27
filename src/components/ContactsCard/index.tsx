@@ -3,12 +3,11 @@
 import Link from "next/link"
 import "./ContactsCard.css"
 import Image from "next/image"
-import linkedin from "@/images/linkedin.svg"
-import github from "@/images/github.svg"
-import email from "@/images/email.svg"
-import whatsapp from "@/images/whatsapp.svg"
-import { useRef, useState } from "react"
-
+import linkedin from "@/images/socials/linkedin.svg"
+import github from "@/images/socials/github.svg"
+import email from "@/images/socials/email.svg"
+import whatsapp from "@/images/socials/whatsapp.svg"
+import { useState } from "react"
 interface ContactsCardProps{
     isDark: boolean
 }
@@ -20,7 +19,6 @@ function ContactsCard({ isDark }: ContactsCardProps) {
     const [contact, setContact] = useState<string>("")
     const [message, setMessage] = useState<string>("")
     const [submitOk, setSubmitOk] = useState<boolean>(false)
-
 
     const handleSubmit = (ev: any) => { 
         ev.preventDefault()
@@ -44,7 +42,9 @@ function ContactsCard({ isDark }: ContactsCardProps) {
         <div className="cardContacts p-5 flex flex-col gap-5 mt-10 mb-14 lg:flex-row ">
             
             <div className="border-b pb-7 border-zinc-700 lg:border-b-0 lg:border-e lg:pe-10">
+                
                 <h3 className="text-center text-xl mb-7">Envie-me uma mensagem!</h3>
+                
                 <form className="flex flex-col" method="POST" autoComplete="off">
                     <label htmlFor="name" className="text-blue-700">Nome</label>
                     <input
@@ -57,6 +57,7 @@ function ContactsCard({ isDark }: ContactsCardProps) {
                         required
                         minLength={3}
                     />
+
                     <label htmlFor="email" className="mt-5 text-blue-700">Email</label>
                     <input 
                         className={`outline-none border border-transparent py-1 px-2 transition-all rounded-sm focus-within:border-blue-700 ${isDark ?"bg-zinc-900" : "bg-zinc-300"}`}
@@ -68,6 +69,7 @@ function ContactsCard({ isDark }: ContactsCardProps) {
                         required
                         minLength={10}
                     />
+
                     <label htmlFor="contact" className="mt-5 text-blue-700">Contato</label>
                     <input
                         className={`outline-none border border-transparent py-1 px-2 transition-all rounded-sm focus-within:border-blue-700 ${isDark ?"bg-zinc-900" : "bg-zinc-300"}`}
@@ -79,6 +81,7 @@ function ContactsCard({ isDark }: ContactsCardProps) {
                         required
                         minLength={8}
                     />
+
                     <label htmlFor="message" className="mt-5 text-blue-700">Mensagem</label>
                     <textarea
                         className={`w-full h-[100px] outline-none border border-transparent py-1 px-2 transition-all rounded-sm focus-within:border-blue-700 ${isDark ?"bg-zinc-900" : "bg-zinc-300"}`}
@@ -99,6 +102,7 @@ function ContactsCard({ isDark }: ContactsCardProps) {
                             Enviar mensagem
                         </button>
                     </div>
+
                     {submitOk && (
                         <div className={`flex items-center justify-center mt-7 w-full h-[50px] outline-none border border-transparent py-1 px-2 rounded-sm ${isDark ?"bg-zinc-900" : "bg-zinc-300"}`}>
                             <p className="text-sm sm:text-base">Mensagem enviada, muito obrigado! :) </p>
@@ -154,7 +158,6 @@ function ContactsCard({ isDark }: ContactsCardProps) {
 
                         <p className={`border-b hover:brightness-50 ${isDark ? "border-zinc-100" : "border-zinc-800"}`}>+55 (16) 98251-4074</p>
                     </Link>
-   
                 </div>
             </div>
         </div>

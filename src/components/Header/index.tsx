@@ -1,10 +1,9 @@
 import { IconMoonFilled, IconSunFilled } from "@tabler/icons-react";
 import "./Header.css";
 import Link from "next/link";
-import LogoDark from "@/images/logotipo-dark.png"
-import LogoLight from "@/images/logotipo-light.png"
+import LogoDark from "@/images/logotipos/logotipo-dark.png"
+import LogoLight from "@/images/logotipos/logotipo-light.png"
 import Image from "next/image";
-
 interface HeaderProps {
     changeTheme: () => void,
     isDark: boolean
@@ -20,10 +19,14 @@ function Header( {changeTheme, isDark}: HeaderProps ) {
                     alt="Logotipo"
                 />
             </Link>
+
             <nav className="flex flex-col gap-5 sm:flex-row">
                 <Link className={`border-b border-transparent transition-all ${isDark ? "hover:border-zinc-100" : "hover:border-zinc-800" }`} href="#about">SOBRE MIM</Link>
+
                 <Link href="#tech-skills" className={`border-b border-transparent transition-all ${isDark ? "hover:border-zinc-100" : "hover:border-zinc-800" }`}>TECH SKILLS</Link>
+
                 <Link href="#projects" className={`border-b border-transparent transition-all ${isDark ? "hover:border-zinc-100" : "hover:border-zinc-800" }`}>PROJETOS</Link>
+
                 <Link href="#contacts" className={`border-b border-transparent transition-all ${isDark ? "hover:border-zinc-100" : "hover:border-zinc-800" }`}>CONTATOS</Link>
             </nav>
 
@@ -32,8 +35,7 @@ function Header( {changeTheme, isDark}: HeaderProps ) {
                     {isDark? "Light" : "Dark"}
                     {isDark? <IconSunFilled/> : <IconMoonFilled/>}
                 </button>
-            </div>
-            
+            </div>  
         </header>
     )
 }

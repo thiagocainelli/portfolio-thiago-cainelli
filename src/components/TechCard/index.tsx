@@ -1,5 +1,4 @@
 import Image from "next/image"
-
 interface TechCardProps {
     name: string
     image: any
@@ -17,9 +16,10 @@ function TechCard({ image, name, isDark }: TechCardProps) {
                     alt={name} 
                 />
             </div>
+
             <p className="w-full text-center ">
                 {name}
-            </p>
+            </p>      
         </div>
     )
 }

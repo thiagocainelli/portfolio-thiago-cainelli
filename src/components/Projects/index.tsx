@@ -1,18 +1,18 @@
 import ProjectCard from "@/components/ProjectCard";
 import Titles from "@/components/Titles";
-import tailwind from "@/images/tailwind.svg"
-import javascript from "@/images/javascript.svg"
-import typescript from "@/images/typescript.svg"
-import reactjs from "@/images/reactjs.svg"
-import nextjs from "@/images/nextjs.svg"
-import html from "@/images/html.svg"
-import css from "@/images/css.svg"
-import sass from "@/images/sass.svg"
-import bootstrap from "@/images/bootstrap.svg"
-import personalFinances from "@/images/personal-finances.png";
-import tlviagens from "@/images/tl-viagens.png";
-import tcimports from "@/images/tc-imports.png";
-import projectx from "@/images/space-x.png";
+import tailwind from "@/images/technologies/tailwind.svg"
+import javascript from "@/images/technologies/javascript.svg"
+import typescript from "@/images/technologies/typescript.svg"
+import reactjs from "@/images/technologies/reactjs.svg"
+import nextjs from "@/images/technologies/nextjs.svg"
+import html from "@/images/technologies/html.svg"
+import css from "@/images/technologies/css.svg"
+import sass from "@/images/technologies/sass.svg"
+import bootstrap from "@/images/technologies/bootstrap.svg"
+import personalFinances from "@/images/projects/personal-finances.png";
+import tlviagens from "@/images/projects/tl-viagens.png";
+import tcimports from "@/images/projects/tc-imports.png";
+import projectx from "@/images/projects/space-x.png";
 import Link from "next/link";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -93,7 +93,6 @@ function Projects({ isDark }: ProjectsProps) {
             <div className="w-full flex items-center justify-center mt-10 mb-14">
                 <p className="text-center">Para visualizar mais projetos, acesse o meu <Link href="https://github.com/thiagocainelli" target="_blank"><span className="text-blue-700 border-b border-blue-700 hover:text-blue-900">GitHub!</span></Link></p>
             </div>
-
         </section>
     )
 }

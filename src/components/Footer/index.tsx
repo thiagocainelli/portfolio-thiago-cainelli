@@ -1,8 +1,8 @@
 import Link from "next/link";
 import "./Footer.css";
 import Image from "next/image";
-import LogoDark from "@/images/logotipo-dark.png"
-import LogoLight from "@/images/logotipo-light.png"
+import LogoDark from "@/images/logotipos/logotipo-dark.png"
+import LogoLight from "@/images/logotipos/logotipo-light.png"
 interface FooterProps {
     isDark: boolean
 }
@@ -17,10 +17,11 @@ function Footer ({ isDark }: FooterProps) {
                     alt="Logotipo"
                 />
             </Link>
+
             <div className="flex flex-col justify-center items-center sm:flex-row sm:gap-1">
                 <p>&copy;Thiago Cainelli 2023.</p>
                 <p>Todos os direitos reservados.</p>
-            </div>
+            </div>    
         </footer>
     )
 }

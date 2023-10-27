@@ -1,12 +1,11 @@
 import Titles from "@/components/Titles"
 import Image from "next/image"
-import ThiagoImg from "@/images/thiago2-without-bg.png";
+import ThiagoImg from "@/images/myPerson/thiago2-without-bg.png";
 import "./About.css";
 import Link from "next/link";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from "react";
-
 interface AboutProps {
     isDark: boolean
 }
@@ -19,6 +18,7 @@ function About({ isDark }: AboutProps) {
 
     return (
         <section id="about" className={`w-full flex flex-col items-center border-t mb-3 ${isDark ? "border-zinc-700" : "border-zinc-300"}`}>
+            
             <Titles text="Sobre Mim" />
             
             <div className="flex flex-col gap-8 mt-10 mb-14 items-center justify-center sm:flex-row sm:gap-3">
@@ -37,11 +37,9 @@ function About({ isDark }: AboutProps) {
 
                     <Link href="https://drive.google.com/file/d/1DDX2OfddfFQakU2ZzmKK0aFyX_CDs8aT/view?usp=sharing" target="_blank">
                         <button className="bg-blue-700 flex gap-1 items-center text-lg justify-center mt-5 py-2 px-3 rounded-md text-zinc-100 transition-all hover:scale-105 hover:bg-blue-900">
-                        
                             Download CV
                         </button>
                     </Link>
-
                 </div>
             </div>
         </section>

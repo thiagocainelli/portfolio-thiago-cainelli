@@ -2,7 +2,6 @@ import { IconBrandGithub, IconExternalLink } from "@tabler/icons-react"
 import Image from "next/image"
 import Link from "next/link"
 import "./ProjectCard.css"
-
 interface ProjectCardProps {
     projectName: string,
     projectImage: any,
@@ -19,10 +18,11 @@ interface ProjectCardProps {
     isDark: boolean
 }
 
-
 function ProjectCard({ projectName, projectImage, repositoryLink, prevLink, techImage1, techName1, techImage2, techName2, techImage3, techName3, techImage4, techName4, isDark} : ProjectCardProps) {
+    
     return (
       <div className={`w-[320px] h-[470px] p-3 flex flex-col items-center justify-center border-2 border-transparent transition-all hover:scale-105 hover:border-blue-700 cursor-default ${isDark ? "bg-zinc-700" : "bg-zinc-300"}`}>
+        
         <div className="text-2xl mb-1">
             {projectName}
         </div>
@@ -60,6 +60,7 @@ function ProjectCard({ projectName, projectImage, repositoryLink, prevLink, tech
                 />
                 {techName1}
             </div>
+
             <div className="flex items-center gap-2">
                 <Image
                     width={30}
@@ -68,6 +69,7 @@ function ProjectCard({ projectName, projectImage, repositoryLink, prevLink, tech
                 />
                 {techName2}
             </div>
+
             <div className="flex items-center gap-2">
                 <Image
                     width={30}
@@ -76,6 +78,7 @@ function ProjectCard({ projectName, projectImage, repositoryLink, prevLink, tech
                 />
                 {techName3}
             </div>
+            
             <div className="flex items-center gap-2">
                 <Image
                     width={30}
