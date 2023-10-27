@@ -30,7 +30,7 @@ function About({ isDark }: AboutProps) {
                     <Link href="https://drive.google.com/file/d/1DDX2OfddfFQakU2ZzmKK0aFyX_CDs8aT/view?usp=sharing" target="_blank">
                         <button className="bg-blue-700 flex gap-1 items-center text-lg justify-center mt-5 py-2 px-3 rounded-md text-zinc-100 transition-all hover:scale-105 hover:bg-blue-900">
                         
-                            Meu CV
+                            Download CV
                         </button>
                     </Link>
 
