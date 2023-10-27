@@ -20,22 +20,39 @@ function ContactsCard({ isDark }: ContactsCardProps) {
     const [message, setMessage] = useState<string>("")
     const [submitOk, setSubmitOk] = useState<boolean>(false)
 
+    
     const handleSubmit = (ev: any) => { 
         ev.preventDefault()
 
-        if(name.length >= 3 && personalEmail.length >= 8 && personalEmail.includes("@") && contact.length >= 8 && message.length >= 2) {
-            
-            setSubmitOk(true) 
-            setName("")
-            setPersonalEmail("")
-            setContact("")
+        const cleanInputValues = [
+            setName(""),
+            setPersonalEmail(""),
+            setContact(""),
             setMessage("")
+        ]
+
+        if (name.length >= 3 && personalEmail.length >= 3 && personalEmail.includes("@" && ".") && contact.includes("0" || "1" || "2" || "3" || "4" || "5" || "6" || "7" || "8" || "9" || "(" || ")" || "+" || " " || "-") && contact.length >= 8 && message.length >= 2) {
             
+            const confirmation = confirm(`
+            Confirma o envio da mensagem com os dados abaixo?
+            
+            Nome: ${name}
+            Email: ${personalEmail}
+            Contato: ${contact}
+            Mensagem: ${message}
+            `)
+
+            if(confirmation) {
+                setSubmitOk(true)
+                cleanInputValues
+            } 
+
+            return
+
         } else {
-            alert(`Não foi possível enviar a mensagem. Por favor verificar os requisitos necessários.`)
+            alert(`[ERRO] Informações preenchidas incorretamente, por favor tente novamente.`)
         }
 
-        return
     }
 
     return (
@@ -104,8 +121,9 @@ function ContactsCard({ isDark }: ContactsCardProps) {
                     </div>
 
                     {submitOk && (
-                        <div className={`flex items-center justify-center mt-7 w-full h-[50px] outline-none border border-transparent py-1 px-2 rounded-sm ${isDark ?"bg-zinc-900" : "bg-zinc-300"}`}>
-                            <p className="text-sm sm:text-base">Mensagem enviada, muito obrigado! :) </p>
+                        <div className={`flex flex-col items-center justify-center mt-7 w-full cursor-default border border-transparent py-2 px-2 rounded-sm ${isDark ?"bg-zinc-900" : "bg-zinc-300"}`}>
+                            <p className="text-sm sm:text-base">Mensagem enviada.</p>
+                            <p className="text-sm sm:text-base">Muito obrigado! 😀 </p>
                         </div>
                     )}
                 </form>
