@@ -34,7 +34,7 @@ export default function Home() {
     
       <IconBackToTop />
 
-      <Footer />
+      <Footer isDark={isDark} />
       
     </main>
   )

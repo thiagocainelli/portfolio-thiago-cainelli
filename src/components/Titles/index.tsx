@@ -7,7 +7,7 @@ interface TitlesProps {
 function Titles({text}: TitlesProps) {
     return (
         <>
-            <h2 className="titlesText text-xl md:text-2xl xl:text-3xl my-4">{text}</h2>
+            <h2 className="titlesText text-2xl md:text-3xl my-4">{text}</h2>
         </>
     )
 }

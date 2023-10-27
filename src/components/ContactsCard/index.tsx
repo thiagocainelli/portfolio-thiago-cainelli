@@ -44,7 +44,7 @@ function ContactsCard({ isDark }: ContactsCardProps) {
         <div className="cardContacts p-5 flex flex-col gap-5 mt-10 mb-14 lg:flex-row ">
             
             <div className="border-b pb-7 border-zinc-700 lg:border-b-0 lg:border-e lg:pe-10">
-                <h3 className="text-center text-2xl mb-7">Envie-me uma mensagem!</h3>
+                <h3 className="text-center text-xl mb-7">Envie-me uma mensagem!</h3>
                 <form className="flex flex-col" method="POST" autoComplete="off">
                     <label htmlFor="name" className="text-blue-700">Nome</label>
                     <input
@@ -108,7 +108,7 @@ function ContactsCard({ isDark }: ContactsCardProps) {
             </div>
 
             <div className="lg:px-5">
-                <h3 className="text-center text-2xl mb-5 lg:mb-0">Links de contato</h3>
+                <h3 className="text-center text-xl mb-5 lg:mb-0">Links de contato</h3>
                 
                 <div className="flex flex-col justify-evenly gap-5 lg:gap-0 h-full"> 
                     <Link href="https://www.linkedin.com/in/thiagocainelli" target="_blank" className="flex items-center gap-3">

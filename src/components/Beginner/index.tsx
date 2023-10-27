@@ -7,7 +7,7 @@ import "./Beginner.css";
 
 function Beginner() {
     return (
-        <section className="w-full h-screen flex flex-col items-center justify-evenly sm:flex-row my-5">
+        <section className="w-full sm:h-screen flex flex-col items-center justify-evenly sm:flex-row my-5">
             <div className="flex flex-col flex-wrap text-center gap-5 sm:gap-3 sm:text-left">
                 <h3 className="text-2xl md:text-3xl 2xl:text-4xl">Olá, me chamo Thiago Cainelli! 👋</h3>
                 <h1 className="text-blue-700 text-4xl 2xl:text-6xl font-bold  text-center sm:text-left sm:text-5xl">Sou Desenvolvedor Front-End</h1>

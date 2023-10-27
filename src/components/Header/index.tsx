@@ -1,7 +1,8 @@
 import { IconMoonFilled, IconSunFilled } from "@tabler/icons-react";
 import "./Header.css";
 import Link from "next/link";
-import LogoDark from "@/images/thiagocainelli-logo-dark.png"
+import LogoDark from "@/images/logotipo-dark.png"
+import LogoLight from "@/images/logotipo-light.png"
 import Image from "next/image";
 
 interface HeaderProps {
@@ -14,8 +15,8 @@ function Header( {changeTheme, isDark}: HeaderProps ) {
         <header className="flex flex-col gap-8 items-center justify-between p-7 sm:flex-row w-full">
             <Link href="/" className="text-3xl sm:text-xl">
                 <Image
-                    className="w-[120px]" 
-                    src={LogoDark} 
+                    className="w-[200px]" 
+                    src={isDark ? LogoDark : LogoLight} 
                     alt="Logotipo"
                 />
             </Link>
