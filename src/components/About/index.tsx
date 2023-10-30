@@ -22,7 +22,7 @@ function About({ isDark }: AboutProps) {
             <Titles text="Sobre Mim" />
             
             <div className="flex flex-col gap-8 mt-10 mb-14 items-center justify-center sm:flex-row sm:gap-3">
-                <div className="w-full sm:w-[50%] flex justify-center items-center">
+                <div data-aos="zoom-in-right" data-aos-duration="2000" className="w-full sm:w-[50%] flex justify-center items-center">
                     <Image 
                         className="secondImage" 
                         src={ThiagoImg} 
