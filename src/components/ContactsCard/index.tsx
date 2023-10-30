@@ -8,6 +8,7 @@ import github from "@/images/socials/github.svg"
 import email from "@/images/socials/email.svg"
 import whatsapp from "@/images/socials/whatsapp.svg"
 import { useState } from "react"
+import emailjs from "@emailjs/browser";
 interface ContactsCardProps{
     isDark: boolean
 }
@@ -31,28 +32,34 @@ function ContactsCard({ isDark }: ContactsCardProps) {
             setMessage("")
         ]
 
-        if (name.length >= 3 && personalEmail.length >= 3 && personalEmail.includes("@" && ".") && contact.includes("0" || "1" || "2" || "3" || "4" || "5" || "6" || "7" || "8" || "9" || "(" || ")" || "+" || " " || "-") && contact.length >= 8 && message.length >= 2) {
+        const templateParams = {
+            from_name: name,
+            email: personalEmail,
+            contact: contact,
+            message: message
+        }
+      
+        const confirmation = confirm(`
+        Confirma o envio da mensagem com os dados abaixo?
             
-            const confirmation = confirm(`
-            Confirma o envio da mensagem com os dados abaixo?
-            
-            Nome: ${name}
-            Email: ${personalEmail}
-            Contato: ${contact}
-            Mensagem: ${message}
-            `)
+        Nome: ${name}
+        Email: ${personalEmail}
+        Contato: ${contact}
+        Mensagem: ${message}
+        `)
 
-            if(confirmation) {
+        if(confirmation) {
+            emailjs.send("service_4hrytss", "template_td0dibr", templateParams, "wkMbZD_9b-Nkr_SYF")
+            .then((response) => {
+                console.log("Email enviado", response.status, response.text)
                 setSubmitOk(true)
                 cleanInputValues
-            } 
-
-            return
-
-        } else {
-            alert(`[ERRO] Informações preenchidas incorretamente, por favor tente novamente.`)
+            }, (err) => {
+                console.log("ERRO: ", err)
+            })
         }
-
+        
+        return;   
     }
 
     return (
@@ -62,8 +69,8 @@ function ContactsCard({ isDark }: ContactsCardProps) {
                 
                 <h3 className="text-center text-xl mb-7">Envie-me uma mensagem!</h3>
                 
-                <form className="flex flex-col" method="POST" autoComplete="off">
-                    <label htmlFor="name" className="text-blue-700">Nome</label>
+                <form className="flex flex-col" method="POST" autoComplete="off" onSubmit={handleSubmit}>
+                    <label htmlFor="name" className="text-blue-700">Nome *</label>
                     <input
                         className={`outline-none border border-transparent py-1 px-2 transition-all rounded-sm focus-within:border-blue-700 ${isDark ?"bg-zinc-900" : "bg-zinc-300"}`} 
                         type="text" 
@@ -75,7 +82,7 @@ function ContactsCard({ isDark }: ContactsCardProps) {
                         minLength={3}
                     />
 
-                    <label htmlFor="email" className="mt-5 text-blue-700">Email</label>
+                    <label htmlFor="email" className="mt-5 text-blue-700">Email *</label>
                     <input 
                         className={`outline-none border border-transparent py-1 px-2 transition-all rounded-sm focus-within:border-blue-700 ${isDark ?"bg-zinc-900" : "bg-zinc-300"}`}
                         type="email" 
@@ -87,7 +94,7 @@ function ContactsCard({ isDark }: ContactsCardProps) {
                         minLength={10}
                     />
 
-                    <label htmlFor="contact" className="mt-5 text-blue-700">Contato</label>
+                    <label htmlFor="contact" className="mt-5 text-blue-700">Contato *</label>
                     <input
                         className={`outline-none border border-transparent py-1 px-2 transition-all rounded-sm focus-within:border-blue-700 ${isDark ?"bg-zinc-900" : "bg-zinc-300"}`}
                         type="tel" 
@@ -99,7 +106,7 @@ function ContactsCard({ isDark }: ContactsCardProps) {
                         minLength={8}
                     />
 
-                    <label htmlFor="message" className="mt-5 text-blue-700">Mensagem</label>
+                    <label htmlFor="message" className="mt-5 text-blue-700">Mensagem *</label>
                     <textarea
                         className={`w-full h-[100px] outline-none border border-transparent py-1 px-2 transition-all rounded-sm focus-within:border-blue-700 ${isDark ?"bg-zinc-900" : "bg-zinc-300"}`}
                         name="message" 
@@ -110,11 +117,14 @@ function ContactsCard({ isDark }: ContactsCardProps) {
                         minLength={2}
                     />
 
+                    <div className="mt-3 mb-2">
+                        <p className="text-xs">* Campos obrigatórios.</p>
+                    </div>
+
                     <div className="flex items-center justify-center mt-7">
                         <button
                             type="submit"
                             className="bg-blue-700 text-zinc-100 px-2 py-1  rounded-md hover:bg-blue-900 active:brightness-50"
-                            onClick={handleSubmit}
                         >
                             Enviar mensagem
                         </button>
