@@ -4,9 +4,15 @@ import './globals.css'
 
 const inter = Inter({ subsets: ['latin'] })
 
+
+
 export const metadata: Metadata = {
   title: 'Portfolio - Thiago Cainelli',
   description: 'Portfólio Thiago Cainelli - Desenvolvedor Front-end',
+  openGraph: {
+    authors: "Thiago Cainelli",
+    description: "Portfólio Thiago Cainelli - Desenvolvedor Front-end", 
+  }
 }
 
 export default function RootLayout({
