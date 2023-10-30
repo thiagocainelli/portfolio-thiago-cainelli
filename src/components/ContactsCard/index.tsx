@@ -50,6 +50,7 @@ function ContactsCard({ isDark }: ContactsCardProps) {
 
         if(confirmation) {
             emailjs.send("service_4hrytss", "template_td0dibr", templateParams, "wkMbZD_9b-Nkr_SYF")
+            
             .then((response) => {
                 console.log("Email enviado", response.status, response.text)
                 setSubmitOk(true)
@@ -58,7 +59,7 @@ function ContactsCard({ isDark }: ContactsCardProps) {
                 console.log("ERRO: ", err)
             })
         }
-        
+
         return;   
     }
 
