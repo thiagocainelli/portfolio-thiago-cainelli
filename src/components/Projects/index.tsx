@@ -13,28 +13,30 @@ import personalFinances from "@/images/projects/personal-finances.jpeg";
 import tlviagens from "@/images/projects/tl-viagens.jpeg";
 import tcimports from "@/images/projects/tc-imports.jpeg";
 import projectx from "@/images/projects/space-x.jpeg";
+import cainellimovies from "@/images/projects/cainelli-movies.jpeg";
 import Link from "next/link";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useEffect } from "react";
+import next from "next";
 interface ProjectsProps {
     isDark: boolean
 }
 
 function Projects({ isDark }: ProjectsProps) {
-    
+
     useEffect(() => {
-        AOS.init(); 
+        AOS.init();
     }, [])
-    
+
     return (
         <section id="projects" className={`w-full flex flex-col items-center border-t mb-3 ${isDark ? "border-zinc-700" : "border-zinc-300"}`}>
-            
+
             <Titles text="Projetos" />
 
             <div data-aos="zoom-in-down" data-aos-duration="2000" className="flex gap-5 flex-wrap items-center justify-center mt-10">
                 <ProjectCard
-                    isDark={isDark} 
+                    isDark={isDark}
                     projectName="Finanças Pessoais"
                     projectImage={personalFinances}
                     repositoryLink="https://github.com/thiagocainelli/personal-finances"
@@ -48,7 +50,21 @@ function Projects({ isDark }: ProjectsProps) {
                 />
 
                 <ProjectCard
-                    isDark={isDark} 
+                    isDark={isDark}
+                    projectName="Cainelli Movies"
+                    projectImage={cainellimovies}
+                    repositoryLink="https://github.com/thiagocainelli/movies-tmdb"
+                    prevLink="https://movies-tmdb-thiago-cainellis-projects.vercel.app/"
+                    techImage1={nextjs}
+                    techName1="NextJS"
+                    techImage2={typescript}
+                    techName2="TypeScript"
+                    techImage3={tailwind}
+                    techName3="TailwindCSS"
+                />
+
+                <ProjectCard
+                    isDark={isDark}
                     projectName="WebSite - TL Viagens"
                     projectImage={tlviagens}
                     repositoryLink="https://github.com/thiagocainelli/tl-viagens"
@@ -62,7 +78,7 @@ function Projects({ isDark }: ProjectsProps) {
                 />
 
                 <ProjectCard
-                    isDark={isDark} 
+                    isDark={isDark}
                     projectName="Controle de Estoque"
                     projectImage={tcimports}
                     repositoryLink="https://github.com/thiagocainelli/tcimports-stock"
@@ -76,7 +92,7 @@ function Projects({ isDark }: ProjectsProps) {
                 />
 
                 <ProjectCard
-                    isDark={isDark} 
+                    isDark={isDark}
                     projectName="WebSite - ProjectX"
                     projectImage={projectx}
                     repositoryLink="https://github.com/thiagocainelli/projectX"
@@ -88,6 +104,7 @@ function Projects({ isDark }: ProjectsProps) {
                     techImage3={bootstrap}
                     techName3="Bootstrap"
                 />
+
             </div>
 
             <div className="w-full flex items-center justify-center mt-10 mb-14">
