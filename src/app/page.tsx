@@ -19,7 +19,7 @@ export default function Home() {
   }
   
   return (
-    <main className={`flex flex-col items-center min-h-screen w-screen max-w-full ${isDark ? "bg-zinc-800 text-zinc-100" : "bg-zinc-100 text-zinc-800"}`}>
+    <main className={`flex flex-col items-center min-h-screen w-screen max-w-full ${isDark ? "bg-zinc-900 text-zinc-100" : "bg-zinc-100 text-zinc-900"}`}>
       
       <Header changeTheme={changeTheme} isDark={isDark} />
      

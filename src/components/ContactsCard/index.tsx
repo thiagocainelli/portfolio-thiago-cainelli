@@ -73,7 +73,7 @@ function ContactsCard({ isDark }: ContactsCardProps) {
                 <form className="flex flex-col" method="POST" autoComplete="off" onSubmit={handleSubmit}>
                     <label htmlFor="name" className="text-blue-700">Nome *</label>
                     <input
-                        className={`outline-none border border-transparent py-1 px-2 transition-all rounded-sm focus-within:border-blue-700 ${isDark ?"bg-zinc-900" : "bg-zinc-300"}`} 
+                        className={`outline-none border border-transparent py-1 px-2 transition-all rounded-sm focus-within:border-blue-700 ${isDark ?"bg-zinc-800" : "bg-zinc-300"}`} 
                         type="text" 
                         name="name" 
                         id="name"
@@ -85,7 +85,7 @@ function ContactsCard({ isDark }: ContactsCardProps) {
 
                     <label htmlFor="email" className="mt-5 text-blue-700">Email *</label>
                     <input 
-                        className={`outline-none border border-transparent py-1 px-2 transition-all rounded-sm focus-within:border-blue-700 ${isDark ?"bg-zinc-900" : "bg-zinc-300"}`}
+                        className={`outline-none border border-transparent py-1 px-2 transition-all rounded-sm focus-within:border-blue-700 ${isDark ?"bg-zinc-800" : "bg-zinc-300"}`}
                         type="email" 
                         name="email" 
                         id="email"
@@ -97,7 +97,7 @@ function ContactsCard({ isDark }: ContactsCardProps) {
 
                     <label htmlFor="contact" className="mt-5 text-blue-700">Contato *</label>
                     <input
-                        className={`outline-none border border-transparent py-1 px-2 transition-all rounded-sm focus-within:border-blue-700 ${isDark ?"bg-zinc-900" : "bg-zinc-300"}`}
+                        className={`outline-none border border-transparent py-1 px-2 transition-all rounded-sm focus-within:border-blue-700 ${isDark ?"bg-zinc-800" : "bg-zinc-300"}`}
                         type="tel" 
                         name="contact" 
                         id="contact"
@@ -109,7 +109,7 @@ function ContactsCard({ isDark }: ContactsCardProps) {
 
                     <label htmlFor="message" className="mt-5 text-blue-700">Mensagem *</label>
                     <textarea
-                        className={`w-full h-[100px] outline-none border border-transparent py-1 px-2 transition-all rounded-sm focus-within:border-blue-700 ${isDark ?"bg-zinc-900" : "bg-zinc-300"}`}
+                        className={`w-full h-[100px] outline-none border border-transparent py-1 px-2 transition-all rounded-sm focus-within:border-blue-700 ${isDark ?"bg-zinc-800" : "bg-zinc-300"}`}
                         name="message" 
                         id="message"
                         value={message} 
