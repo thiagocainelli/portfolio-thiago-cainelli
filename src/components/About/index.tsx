@@ -35,7 +35,7 @@ function About({ isDark }: AboutProps) {
 
                     <p>Atualmente estou me especializando no <span className="text-blue-700">desenvolvimento Front-end</span> trabalhando como freelancer desde Junho/2023 com criações de <span className="text-blue-700">interfaces dinâmicas, responsivas e com alto desempenho.</span> </p>
 
-                    <Link href="https://drive.google.com/file/d/1DDX2OfddfFQakU2ZzmKK0aFyX_CDs8aT/view?usp=sharing" target="_blank">
+                    <Link href="https://drive.google.com/file/d/1N82QWqFoAlAfAe4g9As_ufJKLbTa8yN4/view?usp=sharing" target="_blank">
                         <button className="bg-blue-700 flex gap-1 items-center text-lg justify-center mt-5 py-2 px-3 rounded-md text-zinc-100 transition-all hover:scale-105 hover:bg-blue-900">
                             Download CV
                         </button>
