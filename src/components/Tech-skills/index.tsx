@@ -1,14 +1,16 @@
 import Titles from "@/components/Titles";
-import tailwind from "@/images/technologies/tailwind.svg"
-import javascript from "@/images/technologies/javascript.svg"
-import typescript from "@/images/technologies/typescript.svg"
-import git from "@/images/technologies/git.svg"
-import reactjs from "@/images/technologies/reactjs.svg"
-import nextjs from "@/images/technologies/nextjs.svg"
-import html from "@/images/technologies/html.svg"
-import css from "@/images/technologies/css.svg"
-import bootstrap from "@/images/technologies/bootstrap.svg"
-import sass from "@/images/technologies/sass.svg"
+import tailwind from "@/public/technologies/tailwind.svg";
+import javascript from "@/public/technologies/javascript.svg";
+import typescript from "@/public/technologies/typescript.svg";
+import git from "@/public/technologies/git.svg";
+import reactjs from "@/public/technologies/reactjs.svg";
+import nextjs from "@/public/technologies/nextjs.svg";
+import html from "@/public/technologies/html.svg";
+import css from "@/public/technologies/css.svg";
+import sass from "@/public/technologies/sass.svg";
+import node from "@/public/technologies/nodejs.svg";
+import styledComponents from "@/public/technologies/styled-components.svg";
+import mongodb from "@/public/technologies/mongodb.svg";
 import TechCard from "@/components/TechCard";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -28,16 +30,19 @@ function TechSkills({isDark}: TechSkillsProps) {
             <Titles text="Tech Skills" />
 
             <div data-aos="fade-down" data-aos-duration="2000" className="flex gap-5 flex-wrap items-center justify-center mt-10 mb-14">
-                <TechCard isDark={isDark} image={html} name="HTML5" />
-                <TechCard isDark={isDark} image={css} name="CSS3" />
-                <TechCard isDark={isDark} image={javascript} name="JavaScript" />
-                <TechCard isDark={isDark} image={typescript} name="TypeScript" />
+
                 <TechCard isDark={isDark} image={reactjs} name="ReactJS" />
                 <TechCard isDark={isDark} image={nextjs} name="NextJS" />
+                <TechCard isDark={isDark} image={typescript} name="TypeScript" />
+                <TechCard isDark={isDark} image={javascript} name="JavaScript" />
+                <TechCard isDark={isDark} image={node} name="NodeJS" />
+                <TechCard isDark={isDark} image={html} name="HTML5" />
+                <TechCard isDark={isDark} image={css} name="CSS3" />
+                <TechCard isDark={isDark} image={mongodb} name="MongoDB" />
                 <TechCard isDark={isDark} image={tailwind} name="TailwindCSS" />
-                <TechCard isDark={isDark} image={git} name="Git" />
-                <TechCard isDark={isDark} image={bootstrap} name="Bootstrap" />
+                <TechCard isDark={isDark} image={styledComponents} name="Styled-components"/>
                 <TechCard isDark={isDark} image={sass} name="SASS" />
+                <TechCard isDark={isDark} image={git} name="Git" />
             </div>
         </section>
     )

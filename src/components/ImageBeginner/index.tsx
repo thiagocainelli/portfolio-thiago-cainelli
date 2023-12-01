@@ -1,5 +1,5 @@
 import Image from "next/image"
-import ThiagoImg from "@/images/myPerson/thiago1-circle.png";
+import ThiagoImg from "@/public/myPerson/thiago1-circle.png";
 import { motion } from 'framer-motion';
 
 function ImageBeginner() {

@@ -1,8 +1,8 @@
 import { IconMoonFilled, IconSunFilled } from "@tabler/icons-react";
 import "./Header.css";
 import Link from "next/link";
-import LogoDark from "@/images/logotipos/logotipo-dark.png"
-import LogoLight from "@/images/logotipos/logotipo-light.png"
+import LogoDark from "@/public/logotipos/logotipo-dark.png"
+import LogoLight from "@/public/logotipos/logotipo-light.png"
 import Image from "next/image";
 import MenuHamburguer from "../MenuHamburguer";
 interface HeaderProps {

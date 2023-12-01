@@ -1,6 +1,6 @@
 import Titles from "@/components/Titles"
 import Image from "next/image"
-import ThiagoImg from "@/images/myPerson/thiago2-without-bg.png";
+import ThiagoImg from "@/public/myPerson/thiago2-without-bg.png";
 import "./About.css";
 import Link from "next/link";
 import AOS from 'aos';

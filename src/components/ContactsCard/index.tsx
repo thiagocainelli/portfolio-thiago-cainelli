@@ -3,10 +3,10 @@
 import Link from "next/link"
 import "./ContactsCard.css"
 import Image from "next/image"
-import linkedin from "@/images/socials/linkedin.svg"
-import github from "@/images/socials/github.svg"
-import email from "@/images/socials/email.svg"
-import whatsapp from "@/images/socials/whatsapp.svg"
+import linkedin from "@/public/socials/linkedin.svg"
+import github from "@/public/socials/github.svg"
+import email from "@/public/socials/email.svg"
+import whatsapp from "@/public/socials/whatsapp.svg"
 import { useState } from "react"
 import emailjs from "@emailjs/browser";
 interface ContactsCardProps{
